@@ -1,7 +1,43 @@
+@import'./resets.scss'; 
+@import './variables.scss'; 
+
+
+@mixin flexcenter 
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+@mixin mobile { 
+    @media (max-width: 800) { 
+        @content; 
+    }
+}
+
+
 body { 
-    background-color: blue;
+    background-color: $primary-accent;
 }
 
 main { 
-    background-color: gray;
+    @include flexcenter; 
+    background-color: $primary-color; 
+    color: $text-color;
+    width: 80%;
+    margin: 0 auto; 
+    text-align: center;
+    font-weight: weight(bold);
+    
+
+@include mobile { 
+    font-size: .5em;
+
 }
+  
+
+
+
+
+}
+
